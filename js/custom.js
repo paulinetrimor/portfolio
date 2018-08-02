@@ -33,13 +33,14 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: 'images/simple.jpg' }
+            { src: 'images/shapes.jpg' }
         ],
         timer: false,
-        transition: [ 'zoomIn', ],
+       /* transition: [ 'zoomIn', ],*/
         animation: ['kenburns']
     });
   });
+
 
 
   /* Team carousel

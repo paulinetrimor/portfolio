@@ -19,10 +19,68 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/vegas.min.css">
 	<link rel="stylesheet" href="css/style.css">
-  <!--<link rel="stylesheet" href="css/style2.css"> added particles.js-->
-
-	<!-- Google web font  -->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+
+  <!--pie chart-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['language', 'experience'],
+          ['HTML5',     8],
+          ['CSS3',      6],
+          ['JAVASCRIPT',  3],
+          ['MATLAB', 4],
+          ['Python',   4]
+        ]);
+
+        var options = {
+          width: 600,
+          height: 500,
+          title: 'LANGUAGE',
+          colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['library', 'experience'],
+          ['JQUERY',  5],
+          ['BOOTSTRAP', 6],
+          ['LIB3',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          width: 600,
+          height: 500,
+          title: 'LIBRARIES',
+          colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
 	
 </head>
 <body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
@@ -45,7 +103,7 @@
           <span class="icon icon-bar"></span>
           <span class="icon icon-bar"></span>
         </button>
-        <a href="#top" class="navbar-brand smoothScroll">Pauline Trimor</a>
+        <a href="#top" class="navbar-brand smoothScroll">PAULINE TIRMOR</a>
       </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -65,14 +123,14 @@
 <section id="home">
   <div class="overlay" id="particles-js">
     <div class="container-fluid" id="greeting">
-      <div class="row">
-  
-        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s" >
-          <h1 class="wow fadeInUp" data-wow-delay="0.6s">Hi, I'm Pauline</h1>
-          <p class="wow fadeInUp" data-wow-delay="0.9s">Front-end web developer is my title, creator and designer is who I am. I create responsive and interactive designs to showcase the personality and character of your business or brand. <br> Get to know me <a rel="nofollow" href="http://www.templatemo.com">here</a> .</p>
-          <a href="#about" class="smoothScroll btn btn-success btn-lg wow fadeInUp" data-wow-delay="1.2s">Let's connect</a>
+      <div class="row">  
+        <div class="col-md-12 wow fadeInUp" data-wow-delay="0.3s">
+         <h1 class="wow fadeInUp" data-wow-delay="0.6s">MY NAME IS PAULINE TRIMOR</h1>
         </div>
-
+          <!--<div class="col-md-6 wow fadeInUp data-wow-delay="0.3s">
+            <img class="img img-responsive" src="images/portfolio.jpg">
+          </div>
+            <a href="#about" class="smoothScroll btn btn-success btn-lg wow fadeInUp" data-wow-delay="1.2s">Let's connect</a>-->
       </div>
     </div>
   </div>
@@ -84,22 +142,26 @@
 <section id="about">
   <div class="container">
     <div class="row">
+      <h1>MY STATS</h1>
 
-      <div class="col-md-9 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+      <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
         <div class="about-thumb">
-          <h1>My Stats</h1>
-          <p>I'm an aspiring web developer magician! A boring website can leave a bad first impression. I can help create an interactive, responsive, and fun experience for your users. <br>ADD LINK HERE TO RESUME</p>
-
-          <img src="images/stats.jpg" class="img-responsive" alt="About">
+         
+          <p>Front-end web developer is my title, creator and designer is who I am. I create responsive and interactive designs to showcase the personality and character of your business or brand. </p>         
               
         </div>
       </div>
 
-      <div class="col-md-3 col-sm-4 wow fadeInUp about-img" data-wow-delay="0.6s">
+    <div class="col-md-6 col-sm-6 wow fadeInUp about-img" data-wow-delay="0.6s">
         <img src="images/portfolio.jpg" class="img-responsive img-square" alt="About">
       </div>
 
       <div class="clearfix"></div>
+
+        <div class="flex-container">
+            <div id="piechart" style="width: 700px; height: 500px;"></div>
+            <div id="piechart2" style="width: 700px; height: 500px;"></div>
+        </div>
 
       <div class="col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
         <div class="section-title text-center">
@@ -319,7 +381,7 @@
 
         <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
           <h1>Send a message</h1>
-          <p>Nunc suscipit ante in lectus laoreet, nec pharetra diam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <p></p>
         </div>
 
         <form action="#" method="post" class="wow fadeInUp" data-wow-delay="0.8s">
@@ -354,10 +416,10 @@
 			<div class="col-md-12 col-sm-12">
             
                 <ul class="social-icon"> 
-                    <li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="0.2s"></a></li>
+                    <li><a href="https://www.facebook.com/paulinetrimor" class="fa fa-facebook wow fadeInUp" data-wow-delay="0.2s"></a></li>
                     <li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="0.4s"></a></li>
-                    <li><a href="#" class="fa fa-linkedin wow fadeInUp" data-wow-delay="0.6s"></a></li>
-                    <li><a href="#" class="fa fa-instagram wow fadeInUp" data-wow-delay="0.8s"></a></li>
+                    <li><a href="https://www.linkedin.com/in/pauline-trimor-600735125/" class="fa fa-linkedin wow fadeInUp" data-wow-delay="0.6s"></a></li>
+                    <li><a href="https://www.instagram.com/paulinetrimor" class="fa fa-instagram wow fadeInUp" data-wow-delay="0.8s"></a></li>
                     <li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="1.0s"></a></li>
                 </ul>
 
@@ -386,6 +448,7 @@
 <script src="js/custom.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script> 
+<script src="js/bootstrap.js"></script>
 
 </body>
 </html>
